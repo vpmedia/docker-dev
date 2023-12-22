@@ -1,0 +1,17 @@
+#
+# Copyright (c) 2023-present VPMedia
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# see https://docs.docker.com/compose/compose-file
+#
+services:
+  dev_jaeger:
+    image: jaegertracing/all-in-one:1.50.0
+    restart: unless-stopped
+    env_file:
+      - dev_jaeger.env
+    ports:
+      - "16686:16686" # Serve frontend
+      - "14269:14269" # Serve admin
+      - "5778:5778"   # Serve configs
+      - "4317"        # Accept OTLP gRPC
+  

@@ -1,0 +1,18 @@
+#
+# Copyright (c) 2023-present VPMedia
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# see https://docs.docker.com/compose/compose-file
+#
+services:
+  dev_mysql:
+    image: mysql:8.1
+    platform: linux/amd64
+    env_file:
+      - dev_mysql.env
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_0900_as_cs
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    volumes:
+      - dev_mysql_data:/var/lib/mysql
+      - ./dockerfiles/mysql:/etc/mysql/conf.d:ro

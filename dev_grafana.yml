@@ -1,0 +1,18 @@
+#
+# Copyright (c) 2023-present VPMedia
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# see https://docs.docker.com/compose/compose-file
+#
+services:
+  dev_grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    env_file:
+      - dev_grafana.env
+    ports:
+      - "3000:3000" # Serve frontend
+    volumes:
+      - ./dockerfiles/grafana:/etc/grafana/provisioning
+      - dev_grafana_data:/var/lib/grafana
+    depends_on:
+      - dev_prometheus

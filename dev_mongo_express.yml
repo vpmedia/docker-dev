@@ -1,0 +1,14 @@
+#
+# Copyright (c) 2023-present VPMedia
+# see https://docs.docker.com/compose/compose-file
+#
+services:
+  dev_mongo_express:
+    image: mongo-express
+    restart: unless-stopped
+    env_file:
+      - dev_mongo_express.env
+    ports:
+      - "8081:8081"
+    depends_on:
+      - dev_mongo

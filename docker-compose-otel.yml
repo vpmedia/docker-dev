@@ -1,0 +1,15 @@
+#
+# Copyright (c) 2023-present VPMedia
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# see https://docs.docker.com/compose/compose-file
+#
+include:
+  - dev_jaeger.yml
+  - dev_otel.yml
+  - dev_prometheus.yml
+  - dev_grafana.yml
+volumes:
+  dev_jaeger_data:
+  dev_otel_data:
+  dev_prometheus_data:
+  dev_grafana_data:

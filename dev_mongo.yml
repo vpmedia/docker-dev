@@ -1,0 +1,14 @@
+#
+# Copyright (c) 2023-present VPMedia
+# see https://docs.docker.com/compose/compose-file
+#
+services:
+  dev_mongo:
+    image: mongo
+    restart: unless-stopped
+    env_file:
+      - dev_mongo.env"
+    ports:
+      - "27017:27017"
+    volumes:
+      - dev_mongo_data:/data/db

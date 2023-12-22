@@ -1,0 +1,13 @@
+[mysqld]
+
+# https://dev.mysql.com/doc/refman/8.0/en/replication-options.html#sysvar_server_id
+server_id=1
+
+# https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_connections
+max_connections=151
+
+# https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log
+slow_query_log=1
+
+# https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_long_query_time
+long_query_time=1

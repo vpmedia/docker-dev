@@ -1,0 +1,10 @@
+#
+# Copyright (c) 2023-present VPMedia
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# see https://docs.docker.com/compose/compose-file
+#
+include:
+  - dev_mongo.yml
+  - dev_mongo_express.yml
+volumes:
+  dev_mongo_data:
