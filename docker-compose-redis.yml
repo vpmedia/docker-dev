@@ -5,5 +5,7 @@
 #
 include:
   - dev_redis.yml
+  - dev_redisinsight.yml
 volumes:
   dev_redis_data:
+  dev_redisinsight_data:

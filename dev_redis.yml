@@ -5,18 +5,11 @@
 #
 services:
   dev_redis:
-    image: redis/redis-stack:6.2.6-v9
+    image: redis/redis-stack-server:6.2.6-v10
     ports:
       - "6379:6379"
-      - "8001:8001"
     env_file:
       - dev_redis.env
     volumes:
       - dev_redis_data:/data
       - ./dockerfiles/redis/dev_redis.cnf:/usr/local/etc/dev_redis.cnf
-    deploy:
-      resources:
-        limits:
-          cpus: "0.10"
-        reservations:
-          cpus: "0.05"
