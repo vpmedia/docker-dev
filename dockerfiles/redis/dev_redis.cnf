@@ -3,6 +3,7 @@
 loglevel notice
 
 maxmemory 512M
+databases 24
 
 ##
 # volatile-lru -> Evict using approximated LRU, only keys with an expire set.
