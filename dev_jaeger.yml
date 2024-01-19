@@ -5,7 +5,7 @@
 #
 services:
   dev_jaeger:
-    image: jaegertracing/all-in-one:1.50.0
+    image: jaegertracing/all-in-one:1.53.0
     restart: unless-stopped
     env_file:
       - dev_jaeger.env
