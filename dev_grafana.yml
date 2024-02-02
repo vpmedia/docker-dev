@@ -5,7 +5,7 @@
 #
 services:
   dev_grafana:
-    image: grafana/grafana:10.2.3-ubuntu
+    image: grafana/grafana:10.3.1-ubuntu
     restart: unless-stopped
     env_file:
       - dev_grafana.env
