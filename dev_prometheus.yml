@@ -5,7 +5,7 @@
 #
 services:
  dev_prometheus:
-    image: prom/prometheus:v2.49.1
+    image: prom/prometheus:v2.50.1
     restart: unless-stopped
     env_file:
       - dev_prometheus.env
