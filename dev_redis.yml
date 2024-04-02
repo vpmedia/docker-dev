@@ -5,7 +5,7 @@
 #
 services:
   dev_redis:
-    image: redis/redis-stack:6.2.6-v12 # for production use redis-stack-server without redisinsight
+    image: redis/redis-stack:6.2.6-v13 # for production use redis-stack-server without redisinsight
     ports:
       - "6379:6379"
       - "8001:8001"
