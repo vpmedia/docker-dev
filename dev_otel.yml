@@ -5,7 +5,7 @@
 #
 services:
   dev_otel:
-    image: otel/opentelemetry-collector-contrib:0.97.0
+    image: otel/opentelemetry-collector-contrib:0.103.0
     restart: unless-stopped
     env_file:
       - dev_otel.env
